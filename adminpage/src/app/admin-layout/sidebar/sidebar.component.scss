@@ -1,0 +1,116 @@
+.sidebar {
+  &__logo {
+    position: relative;
+    padding: 0.5rem 0.7rem;
+    z-index: 4;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -38px;
+      right: 15px;
+      height: 1px;
+      width: calc(100% - 30px);
+      background: rgba(255, 255, 255, 0.5);
+    }
+    &-img {
+      width: 35px;
+      height: 35px;
+      border-radius: 0.2857rem;
+      vertical-align: middle;
+      border-style: none;
+    }
+    &-link {
+      opacity: 1;
+      float: left;
+      text-align: center;
+      margin-left: 10px;
+      margin-right: 12px;
+      text-decoration: none;
+    }
+    &-title {
+      text-transform: uppercase;
+      padding: 0.5rem 0;
+      white-space: nowrap;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      line-height: 30px;
+      overflow: hidden;
+      margin-left: 10px;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-height: calc(100vh - 705px);
+    z-index: 4;
+    position: relative;
+    overflow: auto;
+    top: 20px;
+  }
+  &__list {
+    margin-top: 20px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    &-item {
+      color: #fff;
+      margin: 10px 15px 0;
+    }
+    &-link {
+      border-radius: 30px;
+      color: #fff;
+      display: block;
+      text-decoration: none;
+      position: relative;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 0.62475rem;
+      padding: 10px 8px;
+      margin: 0;
+      line-height: 30px;
+      display: block;
+      height: auto;
+      white-space: nowrap;
+
+      &.active:not([data-toggle="collapse"])::before {
+        content: " ";
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        top: 22px;
+        left: -4px;
+        background: #fff;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__link-icon {
+    font-size: 20px;
+    margin-right: 12px;
+    line-height: 30px;
+    width: 34px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    display: inline-block;
+    font: normal normal normal 1em/1 Nucleo;
+    vertical-align: middle;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  &__icon {
+    font-size: 20px;
+    float: left;
+    margin-right: 12px;
+    line-height: 30px;
+    width: 34px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+  }
+}
